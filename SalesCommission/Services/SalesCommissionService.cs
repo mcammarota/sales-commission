@@ -1,4 +1,5 @@
 ﻿using SalesCommission.Model;
+using SalesCommission.Services.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SalesCommission.Services
 {
-    public class SalesCommissionService
+    public class SalesCommissionService : ISalesCommissionService
     {
         public async Task<ReturnCommission> CalculateCommission(Request requests)
         {
@@ -33,6 +34,7 @@ namespace SalesCommission.Services
                 commissionPartial.CommissionTotal += sale.Value;
             }
 
+            //Comissão por venda
             var result = commissionsPartial.OrderBy(s => s.Seller).ThenBy(m => m.Month).GroupBy(d => new { d.Seller, d.Month })
                   .Select(g => new {
                       Seller = g.Key.Seller,
@@ -42,6 +44,7 @@ namespace SalesCommission.Services
                       CommissionTotal = Math.Round(g.Sum(x => x.CommissionTotal), 2)
                   }).ToList();
 
+            //Bônus por meta
             foreach (var commission in result)
             {
                 Commission commissionFinal = new Commission();

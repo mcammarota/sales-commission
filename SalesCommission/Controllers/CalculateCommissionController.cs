@@ -14,7 +14,6 @@ namespace SalesCommission.Controllers
     [ApiController]
     public class CalculateCommissionController : ControllerBase
     {
-
         [Route("calculate")]
         [HttpPost]
         public async Task<ActionResult<ReturnCommission>> CalculateCommission(Request requests)

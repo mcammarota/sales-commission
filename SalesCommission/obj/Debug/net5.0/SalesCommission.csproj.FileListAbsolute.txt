@@ -64,6 +64,12 @@ C:\Users\Pichau\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\r
 C:\Users\Pichau\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.pdb
 C:\Users\Pichau\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.genruntimeconfig.cache
 C:\Users\Pichau\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\ref\SalesCommission.dll
+C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.AssemblyInfoInputs.cache
+C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.AssemblyInfo.cs
+C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.csproj.CoreCompileInputs.cache
+C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\appsettings.json
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\SalesCommission.exe
@@ -83,13 +89,6 @@ C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\bin\Debu
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.csproj.AssemblyReference.cache
-C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.AssemblyInfoInputs.cache
-C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.AssemblyInfo.cs
-C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.csproj.CoreCompileInputs.cache
-C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\staticwebassets\SalesCommission.StaticWebAssets.Manifest.cache
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\staticwebassets\SalesCommission.StaticWebAssets.xml
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\scopedcss\bundle\SalesCommission.styles.css
@@ -99,3 +98,4 @@ C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debu
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\ref\SalesCommission.dll
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.pdb
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.genruntimeconfig.cache
+C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.csproj.AssemblyReference.cache

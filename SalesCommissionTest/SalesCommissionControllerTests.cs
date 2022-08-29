@@ -9,7 +9,7 @@ namespace SalesCommissionTest
         [Fact]
         public void PostCommission_Return_Bonus()
         {
-            var controller = new SalesCommissionController();
+            var controller = new CalculateCommissionController();
         }
     }
 }

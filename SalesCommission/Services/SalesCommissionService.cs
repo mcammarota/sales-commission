@@ -1,51 +1,25 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using SalesCommission.Model;
+﻿using SalesCommission.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 
-namespace SalesCommission.Controllers
+namespace SalesCommission.Services
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class SalesCommissionController : ControllerBase
+    public class SalesCommissionService
     {
-        public static List<Sale> listSales = new List<Sale>();
-
-        [HttpGet]
-        public List<Sale> GetSales()
+        public async Task<ReturnCommission> CalculateCommission(Request requests)
         {
-            return listSales;
-        }
-
-        [HttpPost]
-        public List<Commission> CalculateCommission(List<Sale> sales)
-        {
-            List<Commission> commissions = new List<Commission>();
             List<Commission> commissionsFinal = new List<Commission>();
             List<CommissionPartial> commissionsPartial = new List<CommissionPartial>();
 
-            var metas = new List<(int, int)>
-            {
-                (1, 5),
-                (2, 3),
-                (3, 2),
-                (4, 2),
-                (5, 5),
-                (6, 60),
-                (8, 2),
-                (9, 4),
-                (10, 4),
-                (11, 7),
-                (12, 2)
-            };
+            ReturnCommission returnCommission = new ReturnCommission();
 
-            foreach (var sale in sales)
+            Goals goalsService = new Goals();
+            var goals = goalsService.GetGoals();
+
+            foreach (var sale in requests.Requests)
             {
-                listSales.Add(sale);
                 CommissionPartial commissionPartial = new CommissionPartial();
                 commissionPartial.Seller = sale.Seller;
                 commissionPartial.Month = sale.Date.Month;
@@ -60,22 +34,27 @@ namespace SalesCommission.Controllers
             }
 
             var result = commissionsPartial.OrderBy(s => s.Seller).ThenBy(m => m.Month).GroupBy(d => new { d.Seller, d.Month })
-                  .Select(g => new { Seller = g.Key.Seller, Month = g.Key.Month, Count = g.Count(), 
-                      CommissionValue = Math.Round(g.Sum(x => x.CommissionValue), 2), CommissionTotal = Math.Round(g.Sum(x => x.CommissionTotal), 2) }).ToList();
+                  .Select(g => new {
+                      Seller = g.Key.Seller,
+                      Month = g.Key.Month,
+                      Count = g.Count(),
+                      CommissionValue = Math.Round(g.Sum(x => x.CommissionValue), 2),
+                      CommissionTotal = Math.Round(g.Sum(x => x.CommissionTotal), 2)
+                  }).ToList();
 
-            foreach(var commission in result)
+            foreach (var commission in result)
             {
                 Commission commissionFinal = new Commission();
-                for (int i = 0; i < metas.Count; i++)
+                for (int i = 0; i < goals.Count; i++)
                 {
-                    if (commission.Month == metas[i].Item1)
+                    if (commission.Month == goals[i].Item1)
                     {
                         commissionFinal.Seller = commission.Seller;
                         commissionFinal.Month = commission.Month;
                         commissionFinal.CommissionValue = commission.CommissionValue;
-                        if (commission.Count >= metas[i].Item2)
+                        if (commission.Count >= goals[i].Item2)
                         {
-                            commissionFinal.CommissionValue = commissionFinal.CommissionValue + Math.Round(commission.CommissionTotal* 0.03, 2);
+                            commissionFinal.CommissionValue = commissionFinal.CommissionValue + Math.Round(commission.CommissionTotal * 0.03, 2);
                         }
                         commissionsFinal.Add(commissionFinal);
                     }
@@ -88,7 +67,17 @@ namespace SalesCommission.Controllers
                     commissionsFinal.Add(commissionFinal);
                 }
             }
-            return commissionsFinal;
+
+            try
+            {
+                returnCommission.Commissions = commissionsFinal;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            return await Task.FromResult(returnCommission);
         }
     }
 }

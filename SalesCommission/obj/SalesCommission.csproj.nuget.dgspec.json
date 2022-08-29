@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {}
+    "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
+    "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
+        "projectUniqueName": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
         "projectName": "SalesCommission",
-        "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
-        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\obj\\",
+        "projectPath": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
+        "packagesPath": "C:\\Users\\marcos.cammarota\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marcos.cammarota\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,8 +59,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -72,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

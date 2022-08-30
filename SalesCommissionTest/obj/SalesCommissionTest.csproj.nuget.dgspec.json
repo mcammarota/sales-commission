@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {}
+    "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {
+    "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
+        "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
         "projectName": "SalesCommissionTest",
-        "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
+        "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
         "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\obj\\",
+        "outputPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommissionTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
-                "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj"
+              "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
+                "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommission\\SalesCommission.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
+    "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
+        "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommission\\SalesCommission.csproj",
         "projectName": "SalesCommission",
-        "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
+        "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommission\\SalesCommission.csproj",
         "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\obj\\",
+        "outputPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission-final\\sales-commission\\SalesCommission\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",

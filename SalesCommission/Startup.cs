@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SalesCommission.Services;
+using SalesCommission.Services.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +34,7 @@ namespace SalesCommission
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SalesCommission", Version = "v1" });
             });
+            services.AddScoped<ISalesCommissionService, SalesCommissionService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

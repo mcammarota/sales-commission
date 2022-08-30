@@ -9,34 +9,28 @@ namespace SalesCommission.Services
 {
     public class SalesCommissionService : ISalesCommissionService
     {
+        Goals goalsService = new Goals();
+        List<CommissionPartial> commissionsPartial = new List<CommissionPartial>();
+        ReturnCommission returnCommission = new ReturnCommission();
+
         public async Task<ReturnCommission> CalculateCommission(Request requests)
         {
             List<Commission> commissionsFinal = new List<Commission>();
-            List<CommissionPartial> commissionsPartial = new List<CommissionPartial>();
-
-            ReturnCommission returnCommission = new ReturnCommission();
-
-            Goals goalsService = new Goals();
             var goals = goalsService.GetGoals();
 
+            //Comissão sem bônus
             foreach (var sale in requests.Requests)
             {
                 CommissionPartial commissionPartial = new CommissionPartial();
-                commissionPartial.Seller = sale.Seller;
-                commissionPartial.Month = sale.Date.Month;
-                if (sale.Value < 300)
-                    commissionPartial.CommissionValue = sale.Value * 0.01;
-                else if (sale.Value >= 300 && sale.Value <= 1000)
-                    commissionPartial.CommissionValue = sale.Value * 0.03;
-                else
-                    commissionPartial.CommissionValue = sale.Value * 0.05;
+                commissionPartial = CommissionWithoutBonus(sale);
                 commissionsPartial.Add(commissionPartial);
                 commissionPartial.CommissionTotal += sale.Value;
             }
 
-            //Comissão por venda
+            //Lista de comissões sem bônus
             var result = commissionsPartial.OrderBy(s => s.Seller).ThenBy(m => m.Month).GroupBy(d => new { d.Seller, d.Month })
-                  .Select(g => new {
+                  .Select(g => new ResultCommission
+                  {
                       Seller = g.Key.Seller,
                       Month = g.Key.Month,
                       Count = g.Count(),
@@ -44,7 +38,39 @@ namespace SalesCommission.Services
                       CommissionTotal = Math.Round(g.Sum(x => x.CommissionTotal), 2)
                   }).ToList();
 
-            //Bônus por meta
+            //Total de comissão com bônus por meta
+            commissionsFinal = BonusPerGoal(result);
+
+            try
+            {
+                returnCommission.Commissions = commissionsFinal;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+            return await Task.FromResult(returnCommission);
+        }
+
+        public CommissionPartial CommissionWithoutBonus(Sale sale)
+        {
+            CommissionPartial commissionPartial = new CommissionPartial();
+            commissionPartial.Seller = sale.Seller;
+            commissionPartial.Month = sale.Date.Month;
+            if (sale.Value < 300)
+                commissionPartial.CommissionValue = sale.Value * 0.01;
+            else if (sale.Value >= 300 && sale.Value <= 1000)
+                commissionPartial.CommissionValue = sale.Value * 0.03;
+            else
+                commissionPartial.CommissionValue = sale.Value * 0.05;
+            return commissionPartial;
+        }
+
+        public List<Commission> BonusPerGoal(List<ResultCommission> result)
+        {
+            List<Commission> commissionsFinal = new List<Commission>();
+            var goals = goalsService.GetGoals();
             foreach (var commission in result)
             {
                 Commission commissionFinal = new Commission();
@@ -70,17 +96,7 @@ namespace SalesCommission.Services
                     commissionsFinal.Add(commissionFinal);
                 }
             }
-
-            try
-            {
-                returnCommission.Commissions = commissionsFinal;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-
-            return await Task.FromResult(returnCommission);
+            return commissionsFinal;
         }
     }
 }

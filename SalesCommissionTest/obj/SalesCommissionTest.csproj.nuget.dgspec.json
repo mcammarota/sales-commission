@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {}
+    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {
+    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
+        "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
         "projectName": "SalesCommissionTest",
-        "projectPath": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
-        "packagesPath": "C:\\Users\\marcos.cammarota\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommissionTest\\obj\\",
+        "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\SalesCommissionTest.csproj",
+        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommissionTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marcos.cammarota\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
-                "projectPath": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj"
+              "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
+                "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj"
               }
             }
           }
@@ -44,17 +44,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "FakeItEasy": {
-              "target": "Package",
-              "version": "[7.3.1, )"
-            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
-            },
-            "Moq": {
-              "target": "Package",
-              "version": "[4.18.2, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -79,7 +71,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -88,21 +81,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
+    "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
+        "projectUniqueName": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
         "projectName": "SalesCommission",
-        "projectPath": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
-        "packagesPath": "C:\\Users\\marcos.cammarota\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marcos.cammarota\\source\\repos\\sales-commission\\SalesCommission\\obj\\",
+        "projectPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\SalesCommission.csproj",
+        "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pichau\\source\\repos\\sales-commission\\SalesCommission\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marcos.cammarota\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -147,7 +140,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -159,7 +153,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

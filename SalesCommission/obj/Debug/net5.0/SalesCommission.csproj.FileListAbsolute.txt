@@ -99,3 +99,5 @@ C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debu
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.pdb
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.genruntimeconfig.cache
 C:\Users\marcos.cammarota\source\repos\sales-commission\SalesCommission\obj\Debug\net5.0\SalesCommission.csproj.AssemblyReference.cache
+C:\Users\Pichau\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\Pichau\source\repos\sales-commission\SalesCommission\bin\Debug\net5.0\FakeItEasy.dll

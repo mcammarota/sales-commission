@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SalesCommission.Model;
 using SalesCommission.Services;
+using SalesCommission.Services.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,12 +15,18 @@ namespace SalesCommission.Controllers
     [ApiController]
     public class CalculateCommissionController : ControllerBase
     {
+        private readonly ISalesCommissionService _salesCommissionService;
+
+        public CalculateCommissionController(ISalesCommissionService salesCommissionService)
+        {
+            _salesCommissionService = salesCommissionService;
+        }
+
         [Route("calculate")]
         [HttpPost]
         public async Task<ActionResult<ReturnCommission>> CalculateCommission(Request requests)
         {
-            SalesCommissionService salesCommissionService = new SalesCommissionService();
-            var result = await salesCommissionService.CalculateCommission(requests);
+            var result = await _salesCommissionService.CalculateCommission(requests);
 
             return Ok(result);
         }
